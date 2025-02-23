@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #90C95C;
+    --secondary-color: #90C95C;
+    --text-color: #333;
+    --safe-area-inset-top: env(safe-area-inset-top, 0);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFFEF2;
+    min-height: 100vh;
+    padding: max(20px, var(--safe-area-inset-top)) 20px max(20px, var(--safe-area-inset-bottom));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.google-btn, .email-btn, .guest-btn {
+    width: 100%;
+    padding: clamp(12px, 3vh, 16px);
+    border: none;
+    border-radius: 9999px;
+    font-size: clamp(16px, 4vw, 18px);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.google-btn {
+    background-color: white;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-btn {
+    background-color: white;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: clamp(12px, 3vh, 16px) clamp(16px, 4vw, 20px);
+}
+
+.guest-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(144, 201, 92, 0.3);
+}
+
+.google-btn:active,
+.email-btn:active,
+.guest-btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+.or {
+    color: var(--text-color);
+    font-size: 16px;
+    opacity: 0.6;
+    margin: 8px 0;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
